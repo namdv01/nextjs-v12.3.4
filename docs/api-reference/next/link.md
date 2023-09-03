@@ -156,22 +156,12 @@ function Home() {
   return (
     <ul>
       <li>
-        <Link
-          href={{
-            pathname: '/about',
-            query: { name: 'test' },
-          }}
-        >
+        <Link href="/about/test">
           <a>About us</a>
         </Link>
       </li>
       <li>
-        <Link
-          href={{
-            pathname: '/blog/[slug]',
-            query: { slug: 'my-post' },
-          }}
-        >
+        <Link href="/blog/my-post">
           <a>Blog Post</a>
         </Link>
       </li>
