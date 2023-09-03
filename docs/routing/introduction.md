@@ -114,7 +114,7 @@ function Posts({ posts }) {
         <li key={post.id}>
           <Link
             href={{
-              pathname: '/blog/:slug',
+              pathname: '/blog',
               query: { slug: post.slug },
             }}
           >
