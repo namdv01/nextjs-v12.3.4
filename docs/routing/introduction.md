@@ -112,12 +112,7 @@ function Posts({ posts }) {
     <ul>
       {posts.map((post) => (
         <li key={post.id}>
-          <Link
-            href={{
-              pathname: '/blog',
-              query: { slug: post.slug },
-            }}
-          >
+          <Link href={`/blog/${encodeURIComponent(post.slug)}`}>
             <a>{post.title}</a>
           </Link>
         </li>
