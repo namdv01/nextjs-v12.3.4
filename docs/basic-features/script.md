@@ -117,13 +117,7 @@ Scripts that use the `afterInteractive` strategy are injected client-side and wi
   id="google-analytics"
   strategy="afterInteractive"
   dangerouslySetInnerHTML={{
-    __html: `
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer', 'GTM-XXXXXX');
-  `,
+    __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer', 'GTM-XXXXXX');",
   }}
 />
 ```
@@ -200,12 +194,7 @@ export default function Document() {
         <script
           data-partytown-config
           dangerouslySetInnerHTML={{
-            __html: `
-              partytown = {
-                lib: "/_next/static/~partytown/",
-                debug: true
-              };
-            `,
+            __html: 'partytown = {lib: "/_next/static/~partytown/",debug: true};',
           }}
         />
       </Head>
@@ -244,7 +233,7 @@ Or by using the `dangerouslySetInnerHTML` property:
   id="show-banner"
   strategy="lazyOnload"
   dangerouslySetInnerHTML={{
-    __html: `document.getElementById('banner').classList.remove('hidden')`,
+    __html: "document.getElementById('banner').classList.remove('hidden')",
   }}
 />
 ```
